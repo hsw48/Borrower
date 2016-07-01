@@ -25,12 +25,10 @@ class DisplayDebtViewController: UIViewController {
     
     
     override func viewDidLoad() {
-       
-        
-       
-        super.viewDidLoad()
+       super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.whoTextField.delegate = self
+        self.whatTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +101,7 @@ class DisplayDebtViewController: UIViewController {
                 iOUTableViewController.debts = RealmHelper.retrieveDebts()
             }
         }
+        
     }
     
 
@@ -116,4 +115,12 @@ class DisplayDebtViewController: UIViewController {
     }
     */
 
+}
+
+extension DisplayDebtViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

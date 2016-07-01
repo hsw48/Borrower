@@ -32,6 +32,6 @@ class RealmHelper {
     }
     static func retrieveDebts() -> Results<Debt> {
         let realm = try! Realm()
-        return realm.objects(Debt).sorted("returnDate", ascending: false )
+        return realm.objects(Debt).sorted("returnDate", ascending: true )
     }
 }
