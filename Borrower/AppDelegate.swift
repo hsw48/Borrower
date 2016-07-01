@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Borrower
 //
-//  Created by Julia Woodward on 6/30/16.
+//  Created by Harrison Woodward on 6/30/16.
 //  Copyright © 2016 Harrison Woodward. All rights reserved.
 //
 
